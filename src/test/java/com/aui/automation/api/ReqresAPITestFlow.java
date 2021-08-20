@@ -9,10 +9,8 @@ import static io.restassured.RestAssured.given;
 
 
 public class ReqresAPITestFlow extends BaseFlow {
-
     String firstName;
     String lastName;
-
 
     /**
      * this test will send post request to add new user and from the response we will extract the is
@@ -44,8 +42,6 @@ public class ReqresAPITestFlow extends BaseFlow {
         lastName = js.get(lastNamePath);
         System.out.println("The user with ID#7 is" + " " + firstName + " " + lastName);
     }
-
-
     /**
      * this is the negative test which will send the get request with invalid id and will verify that the response is not found(404)
      */
@@ -55,6 +51,4 @@ public class ReqresAPITestFlow extends BaseFlow {
         response = sendRequest("invalidId", 404);
         Assert.assertEquals(response, "{}", "the response not like the expected ");
     }
-
-
 }

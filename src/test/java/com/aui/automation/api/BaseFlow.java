@@ -6,13 +6,10 @@ import org.testng.annotations.BeforeClass;
 import static io.restassured.RestAssured.given;
 
 public class BaseFlow {
-
-
     public String resource;
     public String firstNamePath;
     public String lastNamePath;
     public  String response;
-
 
     @BeforeClass
     public void before() {
@@ -29,9 +26,6 @@ public class BaseFlow {
                 .when().get(resource+"{id}")
                 .then().log().all().assertThat().statusCode(codeStatus)
                 .extract().response().asString();
-
-
-
     }
 
 }
