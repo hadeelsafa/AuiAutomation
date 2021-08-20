@@ -1,4 +1,4 @@
-package api;
+package com.aui.automation.api;
 
 import io.restassured.RestAssured;
 import org.testng.annotations.BeforeClass;

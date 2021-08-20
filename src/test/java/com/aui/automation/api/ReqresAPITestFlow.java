@@ -1,4 +1,4 @@
-package api;
+package com.aui.automation.api;
 
 import io.restassured.path.json.JsonPath;
 import org.json.JSONObject;
